@@ -7,14 +7,14 @@ function translator(number) {
   let translation, index;
 
   for (let i = 0; i <= number; i++){
-    if (number === 0) {
-      return 0;
-    } else if (keyArray.includes(number)){
-      index = keyArray.indexOf(number);
-      translatedWords.push(robogersLanguage[index]); 
+    if (i === 0) {
+      translatedWords.push(0);
+    } else if (keyArray.includes(i)){
+      index = keyArray.indexOf(i);
+      translatedWords.push(robogersLanguage[index]);  
     }
   }
-  return translatedWords;
+  return translatedWords.join(", ");
 }
 
 
