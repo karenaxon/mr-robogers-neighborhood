@@ -1,5 +1,4 @@
 function numberSeparator(number) {
-  console.log("In number separator with: " + number);
   return number.toString().split('').map(function(num){return parseInt(num)});
 }
 
@@ -10,17 +9,19 @@ function translator(number) {
   let translation, index;
 
   for (let i = 0; i <= number; i++){
-    if(i >= 10){
-      translatedNumbers.push(numberSeparator(i));
+    let separatedNumbers;
+
+    if (i === 0) {
+      translatedNumbers.push(0);
+    } else if (keyArray.includes(i)){
+      index = keyArray.indexOf(i);
+      translatedNumbers.push(robogersLanguage[index]);  
+    } else if (i >= 10) {
+      separatedNumbers = numberSeparator(i);
+      
+    } else {
+      translatedNumbers.push(i);
     }
-    // }else if (i === 0) {
-    //   translatedNumbers.push(0);
-    // } else if (keyArray.includes(i)){
-    //   index = keyArray.indexOf(i);
-    //   translatedNumbers.push(robogersLanguage[index]);  
-    // } else {
-    //   translatedNumbers.push(i);
-    // }
   }
   return translatedNumbers.join(", ");
 }
