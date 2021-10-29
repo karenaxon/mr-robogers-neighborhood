@@ -12,7 +12,9 @@ function translator(number) {
     } else if (keyArray.includes(i)){
       index = keyArray.indexOf(i);
       translatedWords.push(robogersLanguage[index]);  
-    }
+    } else {
+      translatedWords.push(i);
+    } 
   }
   return translatedWords.join(", ");
 }

@@ -31,3 +31,9 @@
 |:---             | :---                                                |
 |Code:            |translator(3);|
 |Expected Output: |0, Beep!, Boop, Won't you be my neighbor? |
+<br>
+
+|Test #6:         |It should return "0", "Beep!", "Boop", "Won't you be my neighbor?", "4" if the input from the user is 4.|
+|:---             | :---                                                |
+|Code:            |translator(4);|
+|Expected Output: |0, Beep!, Boop, Won't you be my neighbor?, 4 |
