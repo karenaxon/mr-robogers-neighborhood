@@ -3,15 +3,18 @@
 function translator(number) {
   const robogersLanguage = ["Beep!", "Boop!", "Won't you be my neighbor?"];
   const keyArray = [1, 2, 3];
+  let translatedWords = [];
   let translation, index;
 
-  if (number === 0) {
-    return 0;
-  } else if (keyArray.includes(number)){
-    index = keyArray.indexOf(number);
-    return translation = robogersLanguage[index]; 
+  for (let i = 0; i <= number; i++){
+    if (number === 0) {
+      return 0;
+    } else if (keyArray.includes(number)){
+      index = keyArray.indexOf(number);
+      translatedWords.push(robogersLanguage[index]); 
+    }
   }
-  
+  return translatedWords;
 }
 
 
