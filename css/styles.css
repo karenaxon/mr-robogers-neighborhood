@@ -1,3 +1,6 @@
-body {
-  background-image: url("../images/neighborhood.png");
+#main-img {
+  height: 350px;
+  width: 350;
+  position: relative; 
+  top: -10px;
 }
