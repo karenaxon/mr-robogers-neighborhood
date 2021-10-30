@@ -13,12 +13,20 @@ function translator(number) {
 
     if (i === 0) {
       translatedNumbers.push(0);
+    } else if (i >= 10) {
+      separatedNumbers = numberSeparator(i);
+      if (separatedNumbers.includes(1) || separatedNumbers.includes(2) ||     separatedNumbers.includes(3)){
+        biggestNumber = Math.max(...separatedNumbers);
+        if (keyArray.includes(biggestNumber)){
+          index = keyArray.indexOf(biggestNumber);
+          translatedNumbers.push(robogersLanguage[index]); 
+        } else {
+          translatedNumbers.push(separatedNumbers.join());
+        }
+      }
     } else if (keyArray.includes(i)){
       index = keyArray.indexOf(i);
       translatedNumbers.push(robogersLanguage[index]);  
-    } else if (i >= 10) {
-      separatedNumbers = numberSeparator(i);
-      
     } else {
       translatedNumbers.push(i);
     }
@@ -31,7 +39,7 @@ $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
     $("#output").hide();
-    
+
     const originalNumber = parseInt($("input#number").val());
     let translation = translator(originalNumber);
     
