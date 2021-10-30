@@ -34,7 +34,6 @@ function translator(number) {
   return translatedNumbers.join(", ");
 }
 
-
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
@@ -44,6 +43,7 @@ $(document).ready(function(){
     let translation = translator(originalNumber);
     
     $("#number-translated").text(translation);
+    $("#display-original-number").text(originalNumber);
     $("#output").show();
     $("form").trigger("reset");
     
