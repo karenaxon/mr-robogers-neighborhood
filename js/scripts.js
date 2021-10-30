@@ -38,7 +38,7 @@ $(document).ready(function(){
     $("#number-translated").text(translation);
     $("#output").show();
     $("form").trigger("reset");
-    $("#output").trigger("reset");
+    
   });
   
 });

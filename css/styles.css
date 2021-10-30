@@ -4,3 +4,8 @@
   position: relative; 
   top: -10px;
 }
+
+#output {
+  display: none;
+  padding-top: 2rem;
+}
