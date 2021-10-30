@@ -21,7 +21,7 @@ function translator(number) {
           index = keyArray.indexOf(biggestNumber);
           translatedNumbers.push(robogersLanguage[index]); 
         } else {
-          translatedNumbers.push(separatedNumbers.join());
+          translatedNumbers.push(separatedNumbers.join(""));
         }
       }
     } else if (keyArray.includes(i)){

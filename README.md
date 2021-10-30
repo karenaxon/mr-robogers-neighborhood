@@ -99,6 +99,12 @@ Copyright (c) October, 2021 - Karen Axon
 |Expected Output: |0, Beep!, Boop, Won't you be my neighbor?, 4, 5, 6, 7, 8, 9, Beep!, Beep!, Boop!, Won't you be my neighbor? |
 <br>
 
+|Test #8:         |It should return "Boop" where 21 would go if the input from the user is 21.|
+|:---             | :---                                                |
+|Code:            |translator (21);|
+|Expected Output: |Boop |
+<br>
+
 ### Describe: numberSeparator()
 <br>
 
