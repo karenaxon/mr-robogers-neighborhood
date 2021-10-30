@@ -105,6 +105,12 @@ Copyright (c) October, 2021 - Karen Axon
 |Expected Output: |Boop |
 <br>
 
+|Test #9:         |It should return "Won't you be my neighbor?" where 32 would go if the input from the user is 32.|
+|:---             | :---                                                |
+|Code:            |translator (32);|
+|Expected Output: |Won't you be my neighbor?|
+<br>
+
 ### Describe: numberSeparator()
 <br>
 
