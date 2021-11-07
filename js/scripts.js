@@ -30,7 +30,7 @@ function translator(number) {
           index = keyArray.indexOf(separatedNumbers[1]);
           translatedNumbers.push(robogersLanguage[index]);
         }
-        
+
       }  else{
           translatedNumbers.push(separatedNumbers.join(""));
       }
@@ -46,17 +46,31 @@ function translator(number) {
 }
 
 $(document).ready(function(){
+
+  $("form#number").keyup(function(event){
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      $("form").submit();
+    }
+  })
+    
   $("form").submit(function(event){
     event.preventDefault();
     $("#output").hide();
 
-    const originalNumber = parseInt($("input#number").val());
+    let input = $("input#number").val();
+    const originalNumber = parseInt(input);
     let translation = translator(originalNumber);
     
+    if (!input.match(/^[0-9]+$/)) {
+      alert("Please enter a number.");
+      $("#output").hide();
+      location.reload();
+    }
+
     $("#number-translated").text(translation);
     $("#display-original-number").text(originalNumber);
     $("#output").show();
     $("form").trigger("reset");
-    
   });
 });
